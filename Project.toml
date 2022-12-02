@@ -1,0 +1,4 @@
+name = "AdventOfCode2022"
+uuid = "139fb262-dd77-474e-bee7-705bfc1aecf0"
+authors = ["Christopher M. Pierce <chris@chris-pierce.com>"]
+version = "0.1.0"
