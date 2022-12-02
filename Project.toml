@@ -2,3 +2,6 @@ name = "AdventOfCode2022"
 uuid = "139fb262-dd77-474e-bee7-705bfc1aecf0"
 authors = ["Christopher M. Pierce <chris@chris-pierce.com>"]
 version = "0.1.0"
+
+[deps]
+Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
