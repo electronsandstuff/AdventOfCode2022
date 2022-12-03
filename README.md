@@ -1,6 +1,6 @@
 # AdventOfCode2022.jl
 My solutions for [Advent of Code 2022](https://adventofcode.com/2022/) using the [julia programming language](https://julialang.org/).
-Project structure was taken from [goggle/AdventOfCode2021.jl](https://github.com/goggle/AdventOfCode2022.jl) with some modifications.
+Project structure was taken from [goggle/AdventOfCode2021.jl](https://github.com/goggle/AdventOfCode2021.jl) with some modifications.
 
 ## Benchmarks
 | Day | Problem | Time | Allocated memory | Solution |
