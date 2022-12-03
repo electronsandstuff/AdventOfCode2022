@@ -58,14 +58,16 @@ end
 
 # Write the benchmark results into a markdown string:
 function _to_markdown_table(bresults)
-    header = "| Day | Time | Allocated memory |\n" *
-             "|----:|-----:|-----------------:|"
+    header = "| Day | Problem | Time | Allocated memory | My Solution |\n" *
+             "|----:|--------:|-----:|-----------------:|------------:|"
     lines = [header]
     for (d, t, m) in bresults
         ds = string(d)
+        ps = "[:white_check_mark:](https://adventofcode.com/2022/day/$d)"
         ts = BenchmarkTools.prettytime(t)
         ms = BenchmarkTools.prettymemory(m)
-        push!(lines, "| $ds | $ts | $ms |")
+        ss = @sprintf("[:white_check_mark:](https://github.com/electronsandstuff/AdventOfCode2022/blob/master/data/day%02d.txt)", d)
+        push!(lines, "| $ds | $ps | $ts | $ms | $ss |")
     end
     return join(lines, "\n")
 end
@@ -84,5 +86,8 @@ function generate_image(image)
     return output
 end
 export generate_image
+
+aoc_benchmark() = print(_to_markdown_table(benchmark()))
+export aoc_benchmark
 
 end # module
