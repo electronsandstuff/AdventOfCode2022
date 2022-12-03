@@ -21,5 +21,5 @@ end
 @testset begin
     @test day02("A Y
     B X
-    C Z")[1] == 15
+    C Z") == [15, 12]
 end
