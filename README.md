@@ -5,8 +5,9 @@ Project structure was taken from [goggle/AdventOfCode2021.jl](https://github.com
 ## Benchmarks
 | Day | Time | Allocated memory |
 |----:|-----:|-----------------:|
-| 1 | 266.800 μs | 251.33 KiB |  
-| 2 | 350.700 μs | 375.95 KiB |  
+| 1 | 266.300 μs | 251.33 KiB |
+| 2 | 347.500 μs | 375.95 KiB |
+| 3 | 512.300 μs | 302.92 KiB |
 
 This data was taken on the following machine.
 ```
