@@ -1,5 +1,6 @@
+module Day01
+
 using AdventOfCode2022
-using Test
 
 function day01(input::String = readInput(joinpath(@__DIR__, "data", "day01.txt")))
     out = [[0]]
@@ -15,21 +16,4 @@ function day01(input::String = readInput(joinpath(@__DIR__, "data", "day01.txt")
     [maximum(out), sum(sort(out, rev=true)[1:3])]
 end
 
-@testset begin
-@test day01("1000
-2000
-3000
-
-4000
-
-5000
-6000
-
-7000
-8000
-9000
-
-10000") == [24000, 45000]
 end
-
-day01()
