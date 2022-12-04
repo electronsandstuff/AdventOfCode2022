@@ -2,7 +2,6 @@ module Day04
 
 using AdventOfCode2022
 
-parseline2(xs) = [parse(Int, x) for x in eachsplit(xs, [',', '-'])]
 
 function day04(input::String = readInput(joinpath(@__DIR__, "data", "day02.txt")))
     sections = [parse(Int, x) for x in eachsplit(input, [',', '-', '\n'], keepempty=false)]
