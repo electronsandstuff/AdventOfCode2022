@@ -9,6 +9,7 @@ Project structure was taken from [goggle/AdventOfCode2021.jl](https://github.com
 | 2 | [:white_check_mark:](https://adventofcode.com/2022/day/2) | 349.100 μs | 375.95 KiB | [:white_check_mark:](https://github.com/electronsandstuff/AdventOfCode2022/blob/master/src/day02.jl) |
 | 3 | [:white_check_mark:](https://adventofcode.com/2022/day/3) | 514.000 μs | 302.92 KiB | [:white_check_mark:](https://github.com/electronsandstuff/AdventOfCode2022/blob/master/src/day03.jl) |
 | 4 | [:white_check_mark:](https://adventofcode.com/2022/day/4) | 394.900 μs | 54.23 KiB | [:white_check_mark:](https://github.com/electronsandstuff/AdventOfCode2022/blob/master/src/day04.jl) |
+| 5 | [:white_check_mark:](https://adventofcode.com/2022/day/5) | 689.200 μs | 654.42 KiB | [:white_check_mark:](https://github.com/electronsandstuff/AdventOfCode2022/blob/master/src/day05.jl) |
 
 This data was taken on the following machine.
 ```
