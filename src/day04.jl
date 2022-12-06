@@ -3,7 +3,7 @@ module Day04
 using AdventOfCode2022
 
 
-function day04(input::String = readInput(joinpath(@__DIR__, "data", "day02.txt")))
+function day04(input::String = readInput(joinpath(@__DIR__, "data", "day04.txt")))
     sections = eachsplit(input, [',', '-', '\n'], keepempty=false)
     sections = [parse(Int, x) for x in sections]
     sections = reshape(sections, 4, size(sections)[1]÷4)

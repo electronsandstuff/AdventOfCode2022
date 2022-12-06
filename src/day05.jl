@@ -7,7 +7,7 @@ move1!(boxes, n, frm, to) = append!(boxes[to], [pop!(boxes[frm]) for _ in 1:n])
 move2!(boxes, n, frm, to) = append!(boxes[to], [pop!(boxes[frm]) for _ in 1:n][end:-1:1])
 last_boxes(b) = String(last.(b))
 
-function day05(input::String = readInput(joinpath(@__DIR__, "data", "day02.txt")))
+function day05(input::String = readInput(joinpath(@__DIR__, "data", "day05.txt")))
     box_str = input[1:findfirst(x->x=='1', input) - 3]
     boxes = reduce(hcat, collect.(split(box_str, '\n')))[2:4:end, end:-1:1]
     boxes = filter.(isletter, eachrow(boxes))

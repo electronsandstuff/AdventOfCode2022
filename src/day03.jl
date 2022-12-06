@@ -12,7 +12,7 @@ function first_repeat(as, bs)  # Faster than set intersection
     end; end
 end
 
-function day03(input::String = readInput(joinpath(@__DIR__, "data", "day02.txt")))
+function day03(input::String = readInput(joinpath(@__DIR__, "data", "day03.txt")))
     rucksacks = [strip(x) for x in split(input, '\n') if !isempty(x)]
 
     score1 = 0
