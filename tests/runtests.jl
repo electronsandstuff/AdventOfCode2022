@@ -54,3 +54,11 @@ move 3 from 1 to 3
 move 2 from 2 to 1
 move 1 from 1 to 2") == ["CMZ", "MCD"]
 end
+
+@testset begin
+    @test day06("mjqjpqmgbljsphdztnvjfqwrcgsmlb") == [7, 19]
+    @test day06("bvwbjplbgvbhsrlpgdmjqwftvncz") == [5, 23]
+    @test day06("nppdvjthqldpwncqszvftbrmjlhg") == [6, 23]
+    @test day06("nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg") == [10, 29]
+    @test day06("zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw") == [11, 26]
+end
