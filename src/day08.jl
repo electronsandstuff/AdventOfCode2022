@@ -9,7 +9,7 @@ function read_arr(input)
     reshape(x, n, length(x)÷n)
 end
 
-is_visible(a, b) = a > maximum(b)
+is_visible(a, b) = findfirst(x->x>a, b) === nothing
 view_dist(a, b) = let z=findfirst(x->x>=a, b); z===nothing ? length(b) : z; end
 
 function day08(input::String = readInput(joinpath(@__DIR__, "data", "day08.txt")))
@@ -26,7 +26,7 @@ function day08(input::String = readInput(joinpath(@__DIR__, "data", "day08.txt")
         end
     end
 
-    [sum(visible), maximum(scenic_score)]
+    [sum(visible), 0]#maximum(scenic_score)]
 end
 
 end
