@@ -12,6 +12,7 @@ end
 is_visible(a, b) = findfirst(x->x>=a, b) === nothing
 view_dist(a, b) = let z=findfirst(x->x>=a, b); z===nothing ? length(b) : z; end
 
+
 function day08(input::String = readInput(joinpath(@__DIR__, "data", "day08.txt")))
     arr = read_arr(input)
 
@@ -20,9 +21,9 @@ function day08(input::String = readInput(joinpath(@__DIR__, "data", "day08.txt")
     scenic_score = zeros(Int, size(arr)...)
     for i in 2:size(visible)[1]-1
         for j in 2:size(visible)[2]-1
-            dirs = [arr[i-1:-1:1,j], arr[i+1:end,j], arr[i,j-1:-1:1], arr[i,j+1:end]]
-            visible[i,j] = reduce(|, is_visible.(arr[i,j], dirs))
-            scenic_score[i,j] = prod(view_dist.(arr[i,j], dirs))
+            dirs = (arr[i-1:-1:1,j], arr[i+1:end,j], arr[i,j-1:-1:1], arr[i,j+1:end])
+            visible[i,j] = |(is_visible.(arr[i,j], dirs)...)
+            scenic_score[i,j] = *(view_dist.(arr[i,j], dirs)...)
         end
     end
 
